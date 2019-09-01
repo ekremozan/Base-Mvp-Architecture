@@ -1,0 +1,102 @@
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mindex 0d85e42..51ad7e9 100644[m
+[1m--- a/.idea/workspace.xml[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -37,8 +37,8 @@[m
+       <file pinned="false" current-in-tab="true">[m
+         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ekremozan/basemvparchitecture/ui/main/MainActivity.kt">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="255">[m
+[31m-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />[m
+[32m+[m[32m            <state relative-caret-position="238">[m
+[32m+[m[32m              <caret line="17" selection-start-line="17" selection-end-line="17" />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+[36m@@ -94,17 +94,17 @@[m
+         <option value="$PROJECT_DIR$/app/src/main/java/com/ekremozan/basemvparchitecture/di/module/ActivityModule.kt" />[m
+         <option value="$PROJECT_DIR$/app/src/main/java/com/ekremozan/basemvparchitecture/ui/base/BaseActivity.kt" />[m
+         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />[m
+[31m-        <option value="$PROJECT_DIR$/app/src/main/java/com/ekremozan/basemvparchitecture/ui/main/MainActivity.kt" />[m
+         <option value="$PROJECT_DIR$/app/build.gradle" />[m
+         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app/src/main/java/com/ekremozan/basemvparchitecture/ui/main/MainActivity.kt" />[m
+       </list>[m
+     </option>[m
+   </component>[m
+[31m-  <component name="ProjectFrameBounds" extendedState="7">[m
+[31m-    <option name="x" value="285" />[m
+[31m-    <option name="y" value="158" />[m
+[31m-    <option name="width" value="1400" />[m
+[31m-    <option name="height" value="1000" />[m
+[32m+[m[32m  <component name="ProjectFrameBounds" extendedState="6">[m
+[32m+[m[32m    <option name="x" value="1912" />[m
+[32m+[m[32m    <option name="y" value="-8" />[m
+[32m+[m[32m    <option name="width" value="1936" />[m
+[32m+[m[32m    <option name="height" value="1056" />[m
+   </component>[m
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />[m
+   <component name="ProjectView">[m
+[36m@@ -264,7 +264,7 @@[m
+     </todo-panel>[m
+   </component>[m
+   <component name="ToolWindowManager">[m
+[31m-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />[m
+[32m+[m[32m    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />[m
+     <editor active="true" />[m
+     <layout>[m
+       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />[m
+[36m@@ -521,8 +521,8 @@[m
+     </entry>[m
+     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ekremozan/basemvparchitecture/ui/main/MainActivity.kt">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="255">[m
+[31m-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />[m
+[32m+[m[32m        <state relative-caret-position="238">[m
+[32m+[m[32m          <caret line="17" selection-start-line="17" selection-end-line="17" />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[1mdiff --git a/app/src/main/java/com/ekremozan/basemvparchitecture/ui/main/MainActivity.kt b/app/src/main/java/com/ekremozan/basemvparchitecture/ui/main/MainActivity.kt[m
+[1mindex 52e2702..48d4210 100644[m
+[1m--- a/app/src/main/java/com/ekremozan/basemvparchitecture/ui/main/MainActivity.kt[m
+[1m+++ b/app/src/main/java/com/ekremozan/basemvparchitecture/ui/main/MainActivity.kt[m
+[36m@@ -1,19 +1,19 @@[m
+[31m-package com.ekremozan.basemvparchitecture.ui.main[m
+[31m-[m
+[31m-import android.os.Bundle[m
+[31m-import com.ekremozan.basemvparchitecture.R[m
+[31m-import com.ekremozan.basemvparchitecture.ui.base.BaseActivity[m
+[31m-import javax.inject.Inject[m
+[31m-[m
+[31m-class MainActivity: BaseActivity(), MainContract.View {[m
+[31m-[m
+[31m-    @Inject[m
+[31m-    lateinit var mPresenter: MainContract.Presenter<MainContract.View>[m
+[31m-[m
+[31m-    override fun onCreate(savedInstanceState: Bundle?) {[m
+[31m-        super.onCreate(savedInstanceState)[m
+[31m-        setContentView(R.layout.activity_main)[m
+[31m-        activityComponent!!.inject(this)[m
+[31m-        mPresenter.onAttach(this@MainActivity)[m
+[31m-    }[m
+[32m+[m[32mpackage com.ekremozan.basemvparchitecture.ui.main[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mimport android.os.Bundle[m[41m[m
+[32m+[m[32mimport com.ekremozan.basemvparchitecture.R[m[41m[m
+[32m+[m[32mimport com.ekremozan.basemvparchitecture.ui.base.BaseActivity[m[41m[m
+[32m+[m[32mimport javax.inject.Inject[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mclass MainActivity: BaseActivity(), MainContract.View {[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m    @Inject[m[41m[m
+[32m+[m[32m    lateinit var mPresenter: MainContract.Presenter<MainContract.View>[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m    override fun onCreate(savedInstanceState: Bundle?) {[m[41m[m
+[32m+[m[32m        super.onCreate(savedInstanceState)[m[41m[m
+[32m+[m[32m        setContentView(R.layout.activity_main)[m[41m[m
+[32m+[m[32m        activityComponent!!.inject(this)[m[41m[m
+[32m+[m[32m        mPresenter.onAttach(this@MainActivity)[m[41m[m
+[32m+[m[32m    }[m[41m[m
+ }[m
+\ No newline at end of file[m

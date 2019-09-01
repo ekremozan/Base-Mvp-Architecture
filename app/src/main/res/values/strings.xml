@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BaseMvpArchitecture</string>
+    <string name="some_error">Bir hata oluştu</string>
+</resources>
